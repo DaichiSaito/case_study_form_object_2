@@ -1,24 +1,14 @@
-# README
+# 複数モデル同時登録のユースケースのサンプル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 要件
+- 企業情報と同時にユーザー情報も登録するようなフォームを想定
+- Company(name, address)
+  - name: null禁止
+  - address: null禁止
+- User(name, email, password)
+  - name: null禁止
+  - email: null禁止, ユニーク
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# 新規作成画面
+[![Image from Gyazo](https://i.gyazo.com/b34ef19d719d45d951076bd9ef470f3c.png)](https://gyazo.com/b34ef19d719d45d951076bd9ef470f3c)
