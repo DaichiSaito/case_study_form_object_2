@@ -1,0 +1,36 @@
+<%= form_with(model: @signup_form, url: signup_path, local: true) do |f| %>
+  <h3>企業情報</h3>
+  <%= render 'shared/error_message', object: f.object.company %>
+  <%= f.fields_for :company do |ff| %>
+    <div>
+      <%= ff.label :name %>
+      <%= ff.text_field :name %>
+    </div>
+    <div>
+      <%= ff.label :address %>
+      <%= ff.text_field :address %>
+    </div>
+  <% end %>
+
+  <h3>ユーザー情報</h3>
+  <%= render 'shared/error_message', object: f.object.user %>
+  <%= f.fields_for :user do |ff| %>
+    <div>
+      <%= ff.label :name %>
+      <%= ff.text_field :name %>
+    </div>
+    <div>
+      <%= ff.label :email %>
+      <%= ff.email_field :email %>
+    </div>
+    <div>
+      <%= ff.label :password %>
+      <%= ff.password_field :password %>
+    </div>
+    <div>
+      <%= ff.label :password_confirmation %>
+      <%= ff.password_field :password_confirmation %>
+    </div>
+  <% end %>
+  <%= f.submit %>
+<% end %>
